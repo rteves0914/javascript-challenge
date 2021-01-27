@@ -7,13 +7,10 @@ var tbody = d3.select("tbody");
 // Loop through each row in the data
 data.forEach(function(sighting) {
 
-    // Log each UFO sighting to the console to verify
-//    console.log(sighting);
-
    // Append table row for each UFO sighting
    var row = tbody.append("tr");
 
-   // Use Object.entries to console.log each UFO sighting value
+   // Use Object.entries to store each UFO sighting value
    Object.entries(sighting).forEach(function([key, value]) {
     //    console.log(key,value);
 
@@ -52,10 +49,14 @@ function runFiltering() {
   
     // Now apply the filter 
     var newTableFiltered = tableData.filter(year => year.datetime === inputValue);
+
+    // And display the filtered data on the console
     console.log(newTableFiltered);
 
+    // Clear the table so we can put the filtered table on webpage
     tbody.html("");
 
+    // Loop through each row of data from the filtered table
     newTableFiltered.forEach(function(sighting) {
     
        // Append table row for each UFO sighting
@@ -63,7 +64,6 @@ function runFiltering() {
     
        // Use Object.entries to console.log each UFO sighting value
        Object.entries(sighting).forEach(function([key, value]) {
-        //    console.log(key,value);
     
             // Append a cell to the row for each value in UFO sightings
             var cell = row.append("td");
