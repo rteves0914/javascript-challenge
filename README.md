@@ -8,3 +8,6 @@ After displaying the sightings on the webpage, the user can search or filter the
 
 This project required the use of HTML, JavaScript, CSS, and whole lot of time and effort!
 
+![](UFO-level-1/images/Homepage.png)
+
+![](UFO-level-1/images/Data.png)
